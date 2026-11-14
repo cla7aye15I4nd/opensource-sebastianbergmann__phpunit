@@ -10,6 +10,7 @@ All notable changes of the PHPUnit 13.4 release series are documented in this fi
 * A baseline is not applied to the issues that are triggered in a file that is not located in the directory of the baseline, or in a directory below it, for instance when the baseline is located in `build/baseline.xml` and the file in `src`
 * When `--log-junit php://stdout` is used, or `php://stdout` is configured for the JUnit XML logfile in the XML configuration file, and the test runner prints its regular output, the test runner ends with `An error occurred inside PHPUnit` after the JUnit XML was printed: the test results are not printed, code coverage reports and the baseline are not written, and the shell exit code is `255`
 * When `--log-junit php://stdout` is used together with `--stderr`, the JUnit XML is printed to the standard error stream
+* When no test is run, `--compact` only prints `No tests executed!` and not why, for instance the PHPUnit error for the invalid data provider of the only test, or the test runner warning for a test class without tests
 
 ## [13.4.7] - 2026-11-13
 
