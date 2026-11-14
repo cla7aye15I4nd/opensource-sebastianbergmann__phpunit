@@ -75,11 +75,10 @@ final readonly class ResultPrinter
     {
         if ($result->numberOfTestsRun() === 0) {
             $this->printer->print('No tests executed!' . PHP_EOL);
-
-            return;
+        } else {
+            $this->printSummaryLine($result);
         }
 
-        $this->printSummaryLine($result);
         $this->printTimeLimitExceeded($result);
         $this->printPhpunitErrors($result);
         $this->printTestRunnerWarnings($result);
